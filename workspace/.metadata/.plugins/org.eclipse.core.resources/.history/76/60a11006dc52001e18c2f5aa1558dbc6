@@ -1,0 +1,23 @@
+package sample04;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class SungJukOutput implements SungJuk {
+
+	@Autowired
+	private SungJukDTO2 sungJukDTO2 = null ;
+	@Override
+	public void execute() {
+		
+		sungJukDTO2.setName(name);
+		sungJukDTO2.setKor(kor);
+		sungJukDTO2.setEng(eng);
+		sungJukDTO2.setMath(math);
+
+
+	}
+
+}

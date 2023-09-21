@@ -1,0 +1,8 @@
+$(function(){
+	$('#writeBtn').click(function(){
+		if($('#name').val()==''){
+			($('#nameDiv').text('이름 입력');
+			($('#name').focus();
+		}
+	});
+});

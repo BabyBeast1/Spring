@@ -1,0 +1,8 @@
+$(function(){
+	$.ajax({
+		type: 'post',
+		url: '/chapter06_web/user/getUserList',
+		data: 'pg=' + $('#pg').val(),
+		
+	});
+});

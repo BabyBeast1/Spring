@@ -1,0 +1,20 @@
+package sample05;
+
+public class MessageBeanImpl implements MessageBean {
+	private String name;
+	private String phone;
+	
+	
+	public MessageBeanImpl(String name) {
+		System.out.println("public MessageBeanImpl(String name)");
+		this.name = name;
+	}
+
+
+	@Override
+	public void helloCall() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

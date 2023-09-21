@@ -1,0 +1,11 @@
+package user.dao;
+
+import org.apache.ibatis.session.SqlSession;
+
+import lombok.Setter;
+
+public class UserDAOMybatis implements UserDAO {
+	@Setter
+	private SqlSession sqlSession;
+
+}

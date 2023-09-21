@@ -1,0 +1,13 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class SungJukController {
+
+	@GetMapping(value="/input.do")
+	public String input() {
+		return "/sungJuk/input";
+	}
+}

@@ -1,0 +1,28 @@
+package com.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class SumController {
+
+	
+//	@RequestMapping(value="/input.do", method=RequestMethod.GET)
+	@GetMapping(value="/input.do")
+	public String input() {
+		return "/sum/input";
+	}
+	
+//	@GetMapping(value="/result.do")
+//	public String result() {
+//		return "/sum/result";
+//	}
+	
+	@GetMapping(value="/result.do")
+	public String result(@RequestParam int x, @RequestParam int y) {
+		return "/sum/result";
+	}
+}

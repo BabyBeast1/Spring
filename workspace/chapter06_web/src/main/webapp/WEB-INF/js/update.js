@@ -1,0 +1,17 @@
+$(function(){
+	$.ajax({
+		type: 'post',
+		url: '/chapter06_web/user/getUser',
+		data: 'id=' + $('#id').val(),
+		dateType: 'json',
+		success: function(data){
+			console.log(JSON.stringify(data));
+			
+			$('#name').val(data.name);
+			$('#pwd').val(data.pwd);
+		},
+		error: function(e){
+			console.log(e);
+		}
+	});
+});

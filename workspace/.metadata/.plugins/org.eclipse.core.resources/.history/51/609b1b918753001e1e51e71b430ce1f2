@@ -1,0 +1,15 @@
+package sample05;
+
+
+//파일로 출력해주는 클래스
+public class FileOutputter implements Outputter {
+	private String filePath;
+	private String fileName;
+
+	@Override
+	public void output(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

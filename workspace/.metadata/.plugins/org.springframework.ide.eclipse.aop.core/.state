@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="chapter02_XML"/>
+<aop-project name="chapter04_XML"/>
+<aop-project name="chapter06_1"/>
+<aop-project name="chapter05_XML"/>
+<aop-project name="chapter06"/>
+<aop-project name="chapter06_web"/>
+<aop-project name="chapter01_XML"/>
+</aop-reference-model>

@@ -1,0 +1,13 @@
+package sample01;
+
+public class HelloSpring {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext");
+		MessageBean messageBean = applicationContext.getBean("messageBeanImple", MessageBean.class);
+		messageBean.sayHello();
+		messageBean.sayHello("바나나", 2500);
+		messageBean.sayHello("참외", 10000, 2);
+	}
+
+}

@@ -1,0 +1,20 @@
+package user.dao;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.transaction.annotation.Transactional;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+
+@Transactional
+public class UserDAOMybatis implements UserDAO {
+	@Setter
+	private SqlSession sqlSession;
+	
+	//@Transactional
+	@Override
+	public void write(UserDTO userDTO) {
+		
+	}
+
+}

@@ -1,0 +1,46 @@
+package sample03;
+
+import java.util.Scanner;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class SungJuckImpl implements SungJuk {
+
+	private SungJukDTO sungJukDTO = null ; //필드, 초기화
+
+	Scanner scan = new Scanner(System.in);
+	
+	
+	
+//	public SungJuckImpl(SungJukDTO sungJukDTO) {
+//		super();
+//		this.sungJukDTO = sungJukDTO;
+//	}
+
+	@Override
+	public void calcTot() {
+		this.tot = kor + eng + math;
+		
+	}
+
+	@Override
+	public void calcAvg() {
+		this.avg = (kor + eng + math) / 3;
+
+	}
+
+	@Override
+	public void display() {
+		System.out.println("이름  국어  영어  수학  총점  평균");
+		System.out.println(name+ "\t" + kor+ "\t" + eng+ "\t" + math + "\t" + tot + "\t" + String.format("%.2f", avg));
+
+	}
+
+	@Override
+	public void modify() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

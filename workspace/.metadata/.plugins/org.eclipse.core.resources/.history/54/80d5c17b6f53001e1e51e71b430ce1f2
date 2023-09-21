@@ -1,0 +1,23 @@
+package sample04;
+
+import java.util.List;
+import java.util.Scanner;
+
+import lombok.Setter;
+
+public class SungJukUpdate implements SungJuk {
+
+	@Setter
+	private List<SungJukDTO2> list;
+	
+	@Override
+	public void execute() {
+		System.out.println();
+Scanner scan = new Scanner(System.in);
+		
+		System.out.println("수정할 이름 입력 : ");
+		String name = scan.next();
+
+	}
+
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="chapter06_web"/>
+			<item value="chapter06_1"/>
+			<item value="chapter06"/>
+			<item value="chapter05_AN"/>
+			<item value="chapter05_XML"/>
+			<item value="chapter04_AN"/>
+			<item value="chapter04_XML"/>
+			<item value="chapter02_AN"/>
+			<item value="chapter02_XML"/>
+			<item value="chapter01_AN"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="chapter06_web"/>
+			<item value="chapter06_1"/>
+			<item value="chapter06"/>
+			<item value="chapter05_AN"/>
+			<item value="chapter05_XML"/>
+			<item value="chapter04_AN"/>
+			<item value="chapter04_XML"/>
+			<item value="chapter02_AN"/>
+			<item value="chapter02_XML"/>
+			<item value="chapter01_AN"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

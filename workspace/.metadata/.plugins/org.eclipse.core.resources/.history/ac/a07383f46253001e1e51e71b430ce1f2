@@ -1,0 +1,47 @@
+package sample04;
+
+import java.util.Scanner;
+
+public class HelloSpring {
+
+	
+		public void menu() {
+			Scanner scan = new Scanner(System.in);
+			SungJuk sungJuk = null;
+			int num;
+			
+
+		System.out.println();
+		System.out.println("**************");
+		System.out.println("1 입력");
+		System.out.println("2 출력");
+		System.out.println("3 수정");
+		System.out.println("4 삭제");
+		System.out.println("5 끝");
+		System.out.println("**************");
+		System.out.println("번호 입력 : ");
+		num = scan.nextInt();
+		
+		if(num == 5 )break;
+		
+		if(num == 1) {
+			sungJuk = new SungJukInput();
+			
+		}else if(num == 2) {
+			sungJuk = new SungJukOutput();
+			
+		}else if(num == 3) {
+			sungJuk = new SungJukUpdate();
+		
+		}else if(num == 4) {
+			sungJuk = new SungJukDelete();
+
+	}
+		public static void main(String[] args) {
+			
+			HelloSpring helloSpring = new HelloSpring();
+			helloSpring.menu(); //호출
+			System.out.println("프로그램을 종료합니다.");
+			
+	}
+}

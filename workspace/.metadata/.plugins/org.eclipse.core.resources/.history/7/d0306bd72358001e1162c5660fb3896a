@@ -1,0 +1,73 @@
+package user.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+@Service
+public class UserServiceImpl implements UserService {
+	@Autowired
+	private UserDAO userDAO;
+	
+	@Override
+	public String isExistId(String id) {
+		//DB
+		UserDTO userDTO = userDAO.isExistId(id);
+		
+		if (userDTO == null)
+			return "non_exist";
+		else
+		return "exist";
+	}
+
+	@Override
+	public void write(UserDTO userDTO) {
+		userDAO.write(userDTO);
+		
+	}
+
+	@Override
+	public List<UserDTO> getUserList(String pg) {
+		//1페이지당 3개씩
+		int endNum = Integer.parseInt(pg) * 3;
+		int startNum = endNum - 2;
+		
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		map.put("startNum", startNum);
+		map.put("endNum", endNum);
+		
+		//DB
+		List<UserDTO> list = userDAO.getUserList(map);
+		System.out.println(list);
+		
+		
+		//List 객체 -> JSON 변환
+		JSONObject json = new JSONObject();
+		
+		JSONArray array = new JSONArray();
+		for(UserDTO userDTO : list) {
+			JSONObject temp = new JSONObject();
+			temp.put("name", userDTO.getName());
+			temp.put("id", userDTO.getId());
+			temp.put("pwd", userDTO.getPwd());
+		} //for
+		
+		return null;
+	}
+
+}
+
+
+
+
+
+
+

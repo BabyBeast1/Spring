@@ -1,0 +1,20 @@
+$(function(){
+	$.ajax({
+		type: 'post',
+		url: '/chapter06_web/user/getUserList',
+		data: 'pg=' + $('#pg').val(),
+		dataType: 'json',
+		success: function(data){
+			//console.log(JSON.stringify(data));
+			//console.log(data[0].name);
+			
+			$.each(data, function(index, items){
+				console.log(items.name);
+			});
+			
+		},
+		error: function(e){
+			console.log(e);
+		}
+	});
+});

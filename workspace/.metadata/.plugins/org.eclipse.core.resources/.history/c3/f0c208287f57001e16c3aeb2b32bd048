@@ -1,0 +1,16 @@
+package user.dao;
+
+import org.springframework.stereotype.Repository;
+
+import user.bean.UserDTO;
+
+@Repository
+public class UserDAOMybatis implements UserDAO {
+
+	@Override
+	public UserDTO isExistId(String id) {
+		
+		return null;
+	}
+
+}

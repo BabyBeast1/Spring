@@ -1,0 +1,32 @@
+package sample05;
+
+//파일로 출력해주는 클래스
+public class FileOutputter implements Outputter {
+	private String filePath;
+	private String fileName;
+
+	public FileOutputter() {
+		System.out.println("FileOutputter 기본 생성자");
+	}
+	
+	public void setFilePath(String filePath) {
+		System.out.println("public void setFilePath(String filePath)");
+		this.filePath = filePath;
+	}
+
+
+
+	public void setFileName(String fileName) {
+		System.out.println("public void setFilePath(String fileName)");
+		this.fileName = fileName;
+	}
+
+
+
+	@Override
+	public void output(String message) {
+		System.out.println("public void output(String message)");
+		
+	}
+
+}

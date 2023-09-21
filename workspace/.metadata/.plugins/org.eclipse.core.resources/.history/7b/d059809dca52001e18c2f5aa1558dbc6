@@ -1,0 +1,43 @@
+package sample03;
+
+import java.util.Scanner;
+
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class SungJukImpl implements SungJuk {
+
+	private SungJukDTO sungJukDTO = null ; //필드, 초기화
+
+	Scanner scan = new Scanner(System.in);
+	
+	
+	
+//	public SungJuckImpl(SungJukDTO sungJukDTO) {
+//		super();
+//		this.sungJukDTO = sungJukDTO;
+//	}
+
+	@Override
+	public void calcTot() {
+		sungJukDTO.setTot(sungJukDTO.getKor() + sungJukDTO.getEng() + sungJukDTO.getMath());
+		
+	}
+
+	@Override
+	public void calcAvg() {
+		sungJukDTO.setAvg(sungJukDTO.getTot()/ 3.0);
+	}
+
+	@Override
+	public void display() {
+		
+	}
+
+	@Override
+	public void modify() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

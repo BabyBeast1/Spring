@@ -1,0 +1,35 @@
+package spring.conf;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource("classpath:spring/db.properties")
+public class SpringConfiguration {
+	private String driver;
+	private String url;
+	private String username;
+	private String password;
+	
+	@Bean
+	public BasicDataSource dataSource(){
+		/*
+		BasicDataSource basicDataSource = new BasicDataSource();	
+		basicDataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		basicDataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
+		basicDataSource.setUsername("c##java");
+		basicDataSource.setPassword("1234");
+		*/
+		
+		BasicDataSource basicDataSource = new BasicDataSource();	
+		basicDataSource.setDriverClassName(driver);
+		basicDataSource.setUrl(url);
+		basicDataSource.setUsername(username);
+		basicDataSource.setPassword(password);
+		
+		return new BasicDataSource();
+	}
+
+}

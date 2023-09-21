@@ -1,0 +1,43 @@
+$(function(){
+	$.ajax({
+		type: 'post',
+		url: '/chapter06_web/user/getUserList',
+		data: 'pg=' + $('#pg').val(),
+		dataType: 'json',
+		success: function(data){
+			//console.log(JSON.stringify(data));
+			//console.log(data.list[0].name);
+			
+			$.each(data.list, function(index, items){
+				$('<tr/>').append($('<td/>',{
+					align: 'center',
+					text : items.name
+				})).append($('<td/>',{
+					align: 'center',
+					text : items.id,
+					css: {
+						cursor: 'pointer'
+					},
+					on: {
+						mouseenter: function() {
+							$(this).css('text-decoration', 'underline');
+						},
+						mouseleave: function() {
+							$(this).css('text-decoration', 'none');
+						}
+					}
+				})).append($('<td/>',{
+					align: 'center',
+					text : items.pwd
+				})).appendTo($('#userListTable'));
+			});//$.each
+			
+			//페이징 처리
+			$('#userPagingDiv').html(data.userPaging);
+			
+		},
+		error: function(e){
+			console.log(e);
+		}
+	});
+});
